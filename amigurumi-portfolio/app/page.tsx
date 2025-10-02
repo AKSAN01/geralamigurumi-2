@@ -93,7 +93,15 @@ export default function AmigurumiPortfolio() {
         <div className="container mx-auto max-w-6xl">
           <div className="text-center space-y-8">
             <div className="inline-block">
-              <div className="w-32 h-32 mx-auto rounded-full bg-secondary/20 flex items-center justify-center mb-6"></div>
+              <div className="w-32 h-32 mx-auto rounded-full bg-secondary/20 flex items-center justify-center mb-6">
+                <Image
+                  src="/Logo.png"
+                  alt="Logo Gerals Amigurumis"
+                  width={96}
+                  height={96}
+                  className="object-contain"
+                />
+              </div>
             </div>
 
             <h1 className="text-4xl md:text-6xl font-bold text-secondary text-balance leading-tight">

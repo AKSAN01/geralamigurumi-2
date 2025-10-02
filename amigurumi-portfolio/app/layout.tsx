@@ -9,7 +9,7 @@ import { Suspense } from "react"
 export const metadata: Metadata = {
   title: "Gerals Amigurumis - Creaciones Tejidas a Mano",
   description: "Amigurumis únicos tejidos a mano con amor. Dale vida al amigo de tus sueños.",
-  generator: "v0.app",
+  
 }
 
 export default function RootLayout({
