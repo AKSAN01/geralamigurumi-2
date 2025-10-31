@@ -18,39 +18,39 @@ export default function AmigurumiPortfolio() {
   const galleryItems = [
     {
       id: 1,
-      title: "Conejito Primavera",
-      description: "Amigurumi de conejo con detalles florales",
-      image: "/cute-crochet-bunny-amigurumi-pastel-colors.jpg",
+      title: "Baymax",
+      description: "Amigurumi de big Hero 6",
+      image: "/foto1.jpg",
     },
     {
       id: 2,
-      title: "Osito Dormilón",
-      description: "Tierno osito tejido a mano",
-      image: "/cute-crochet-bear-amigurumi-sleeping.jpg",
+      title: "Snoopy",
+      description: "Tierno muñeco de SNOOPY",
+      image: "/foto2.jpg",
     },
     {
       id: 3,
-      title: "Gatito Juguetón",
-      description: "Gato amigurumi con accesorios",
-      image: "/cute-crochet-cat-amigurumi-playful.jpg",
+      title: "Pajarito",
+      description: "Pajarito amigurumi tierno y regordete",
+      image: "/foto3.jpg",
     },
     {
       id: 4,
-      title: "Pulpo Arcoíris",
-      description: "Pulpo multicolor tejido",
-      image: "/cute-crochet-octopus-amigurumi-rainbow.jpg",
+      title: "Bluey",
+      description: "Muñeco Basado en Bluey",
+      image: "/foto12.jpg",
     },
     {
       id: 5,
-      title: "Dinosaurio Bebé",
-      description: "Pequeño dinosaurio adorable",
-      image: "/cute-crochet-dinosaur-amigurumi-baby.jpg",
+      title: "Korn",
+      description: "Pequeño Muñeco basado en album de KORN",
+      image: "/foto5.jpg",
     },
     {
       id: 6,
-      title: "Unicornio Mágico",
-      description: "Unicornio con detalles brillantes",
-      image: "/cute-crochet-unicorn-amigurumi-magical.jpg",
+      title: "Flor Spiderman",
+      description: "Rosa en crochet con detalle de Spiderman",
+      image: "/foto6.jpg",
     },
   ]
 
@@ -253,7 +253,14 @@ export default function AmigurumiPortfolio() {
                 personaje soñado y lo haré realidad con mis manos.
               </p>
               <Button size="lg" variant="secondary" className="rounded-full">
-                Hacer una Sugerencia
+              <a
+                href="https://wa.me/3059053260"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary hover:text-primary/80 font-medium"
+              >
+                Haz una sugerencia
+              </a>
               </Button>
             </Card>
           </div>
