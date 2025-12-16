@@ -5,8 +5,10 @@ import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import { Mail, Instagram, MessageCircle, Heart } from "lucide-react"
 import Image from "next/image"
+import { useRouter } from "next/navigation"
 
 export default function AmigurumiPortfolio() {
+  const router = useRouter()
   const [activeSection, setActiveSection] = useState("inicio")
 
   const scrollToSection = (sectionId: string) => {
@@ -130,37 +132,51 @@ export default function AmigurumiPortfolio() {
       </section>
 
       {/* Gallery Section */}
-      <section id="galeria" className="py-20 px-4 bg-muted/50">
-        <div className="container mx-auto max-w-7xl">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold text-secondary mb-4">Nuestro Trabajo</h2>
-            <p className="text-lg text-foreground/70 max-w-2xl mx-auto">
-              Explora nuestra colección de amigurumis únicos, cada uno tejido con cariño
-            </p>
-          </div>
+            <section id="galeria" className="py-20 px-4 bg-muted/50">
+              <div className="container mx-auto max-w-7xl">
+                <div className="text-center mb-16">
+                  <h2 className="text-3xl md:text-5xl font-bold text-secondary mb-4">Nuestro Trabajo</h2>
+                  <p className="text-lg text-foreground/70 max-w-2xl mx-auto">
+                    Explora nuestra colección de amigurumis únicos, cada uno tejido con cariño
+                  </p>
+                </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {galleryItems.map((item) => (
-              <Card
-                key={item.id}
-                className="overflow-hidden rounded-3xl border-2 border-border hover:shadow-2xl hover:scale-105 transition-all duration-300 bg-card"
-              >
-                <div className="aspect-square relative overflow-hidden bg-muted">
-                  <Image
-                    src={item.image || "/placeholder.svg"}
-                    alt={item.title}
-                    fill
-                    className="object-cover hover:scale-110 transition-transform duration-500"
-                  />
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                  {galleryItems.map((item) => (
+                    <Card
+                      key={item.id}
+                      className="overflow-hidden rounded-3xl border-2 border-border hover:shadow-2xl hover:scale-105 transition-all duration-300 bg-card"
+                    >
+                      <div className="aspect-square relative overflow-hidden bg-muted">
+                        <Image
+                          src={item.image || "/placeholder.svg"}
+                          alt={item.title}
+                          fill
+                          className="object-cover hover:scale-110 transition-transform duration-500"
+                        />
+                      </div>
+                      <div className="p-6 space-y-2">
+                        <h3 className="text-xl font-semibold text-secondary">{item.title}</h3>
+                        <p className="text-foreground/70">{item.description}</p>
+                      </div>
+                    </Card>
+                  ))}
                 </div>
-                <div className="p-6 space-y-2">
-                  <h3 className="text-xl font-semibold text-secondary">{item.title}</h3>
-                  <p className="text-foreground/70">{item.description}</p>
+
+                {/* --- AQUI ESTÁ EL BOTÓN DE VER MÁS --- */}
+                <div className="flex justify-center mt-12">
+                  <Button 
+                    size="lg" 
+                    variant="outline" 
+                    className="rounded-full px-10 py-6 text-lg border-2 border-secondary text-secondary hover:bg-secondary hover:text-white transition-all shadow-sm"
+                    onClick={() => router.push('/galeria')}
+                  >
+                    Ver galería completa
+                  </Button>
                 </div>
-              </Card>
-            ))}
-          </div>
-        </div>
+                {/* ------------------------------------- */}
+
+              </div>
       </section>
 
       {/* About Section */}
